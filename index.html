@@ -1,12 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My GitHub Pages Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Femitopia - A safe space for queer women to connect, understand, and support each other in Zipolite, Oaxaca, Mexico">
+  <title>Home | Femitopia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .facility-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .facility-item:hover {
+      transform: translateY(-5px);
+    }
+    .facility-item i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>If you see this, your site is working correctly.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/logo.jpg" alt="Femitopia Logo" class="logo-img">
+        <span>Femitopia</span>
+      </a>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#vision">Our Vision</a></li>
+        <li><a href="#zipolite">About Zipolite</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Full-width Image -->
+  <header id="home" class="hero">
+    <div class="hero-image" style="background-image: url('images/beach.jpg');">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>FIND YOUR PLACE</h1>
+          <p class="tagline">CREATING TOGETHER</p>
+          <h2>Welcome to Femitopia!</h2>
+          <a href="#contact" class="btn btn-primary">Join Our Community</a>
+        </div>
+      </div>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-text">Femitopia is a dream come true, a safe place where we can find peace, meet in beautiful nature, and get to know ourselves and each other. Here, we live, work, share meals, dance, and travel together. We focus on love, positivity, and respect.</p>
+      <p class="hero-text">A Place of Hope. Femitopia is a safe space for queer women to connect, understand, and support each other. Owned and run by us, it welcomes everyone, regardless of background or circumstances.</p>
+      <p class="hero-text">Building Connections. Our vision brings queer women together by the ocean, fostering new ways to bond and create meaningful connections.</p>
+      <p class="hero-text">Join Us in Making History. Be part of the legacy of successful alternative communities and international queer women's utopias.</p>
+    </div>
+  </header>
+  
+  <!-- Image Gallery Section -->
+  <section class="image-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/forest.jpg" alt="Lush forest view at Femitopia">
+      </div>
+      <div class="gallery-item">
+        <img src="images/beach2.jpg" alt="Beautiful beach at Femitopia">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sunset.jpg" alt="Sunset at Femitopia">
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section with Side by Side Image -->
+  <section id="vision" class="section">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Femitopia is a haven for queer women, built on our hopes and dreams. It's a space for connection, healing, and mutual support.</p>
+          <p>We aim to extend the special moments of connection found in queer meetups.</p>
+          <p>With eco-friendly practices, we will build our community with love and respect for the land.</p>
+        </div>
+        <div class="about-image">
+          <img src="images/hand.jpg" alt="Community connection at Femitopia">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Inspired Section with Photo Gallery -->
+  <section id="inspired" class="section">
+    <div class="container">
+      <h2>Get Inspired</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/beach.jpg" alt="Beautiful beach at Femitopia" data-large="images/beach.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="images/forest.jpg" alt="Lush forest view at Femitopia" data-large="images/forest.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="images/pool.jpg" alt="Relaxing pool area" data-large="images/pool.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="images/sunset.jpg" alt="Stunning sunset view" data-large="images/sunset.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="images/surfer.jpg" alt="Surfing at the beach" data-large="images/surfer.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="images/turtle.jpg" alt="Sea turtle in the ocean" data-large="images/turtle.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+      <div id="caption"></div>
+    </div>
+  </section>
+
+  <!-- About Zipolite Section with Full-width Image -->
+  <section id="zipolite" class="section">
+    <div class="full-width-image" style="background-image: url('images/up view zipolite.jpg');">
+      <div class="image-overlay">
+        <h2>About Zipolite</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <p>Zipolite, located in Oaxaca, Mexico, is known for its peaceful atmosphere and nudist-friendly beach. Its 1.75 km of sandy coastline is perfect for swimming and surfing. Enjoy the consistent tropical weather while exploring nearby beaches like Estacahuite, La Mina, and La Boquilla. Discover charming towns such as San Agustinillo and Mazunte, home to the Mexican Turtle Center, or visit Huatulco Bay and Puerto Escondido for more adventures. Wildlife enthusiasts can observe armadillos, iguanas, dolphins, and migrating whales in the area.</p>
+          <p>Bring your true self to our space. We're a community where everyone is open, honest, and ready to grow. If you love nature, being by the ocean, and feel comfortable in sex-positive, nudist spaces, you'll fit right in. Know your community, respect pronouns, bring your skills or be ready to learn, and keep an open heart. Together, we'll create something special.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional Gallery Section -->
+    <div class="gallery-section">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/forest2.jpg" alt="Nature at Femitopia">
+        </div>
+        <div class="gallery-item">
+          <img src="images/pool.jpg" alt="Pool area at Femitopia">
+        </div>
+        <div class="gallery-item">
+          <img src="images/sunset2.jpg" alt="Another beautiful sunset">
+        </div>
+        <div class="gallery-item">
+          <img src="images/sunset3.jpg" alt="Evening at Femitopia">
+        </div>
+        <div class="gallery-item">
+          <img src="images/surfer.jpg" alt="Surfing at Zipolite">
+        </div>
+        <div class="gallery-item">
+          <img src="images/turtle.jpg" alt="Turtle at the beach">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="section bg-light">
+    <div class="container">
+      <h2>What We Dream of Creating</h2>
+      <div class="facilities-grid">
+        <div class="facility-item">
+          <i class="fas fa-beer"></i>
+          <h3>Beer & Wine Shop</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-coffee"></i>
+          <h3>Coffee Shop</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-beer"></i>
+          <h3>Beer Brewery</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-cut"></i>
+          <h3>Queer Beauty Salon</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-ice-cream"></i>
+          <h3>Ice Cream Shop</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-spa"></i>
+          <h3>Yoga Classes</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-music"></i>
+          <h3>Live Music</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-cut"></i>
+          <h3>Queer Barbershop</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-spa"></i>
+          <h3>Spa & Massages</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-money-bill-wave"></i>
+          <h3>ATM</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-heart"></i>
+          <h3>Sex Shop</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-tools"></i>
+          <h3>Workshop Spaces</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-laptop"></i>
+          <h3>Working Stations</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-motorcycle"></i>
+          <h3>Car & Scooter Rental</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas-paint-brush"></i>
+          <h3>Tattoo Studio</h3>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-laptop"></i>
+          <h3>Electronics and Tech</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteer Section -->
+  <section id="volunteer" class="section">
+    <div class="container">
+      <h2>Volunteer With Us</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Volunteers are essential to our project, and we welcome everyone, regardless of financial means. We offer diverse opportunities, including permaculture, gardening, building, cooking, and more. Contact us with your skills to arrange a workshop or volunteering options.</p>
+          <p>Volunteers receive accommodation, food, and access to all workshops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us Section -->
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h2>JOIN US IN OUR JOURNEY</h2>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>CONTACT US</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres near Playa Zipolite, Oaxaca, México</p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:femitopiaMX@gmail.com">femitopiaMX@gmail.com</a></p>
+          <div class="social-links">
+            <p>Follow us on Instagram</p>
+            <a href="https://www.instagram.com/femitopiamx/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/xpzvbazn" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Femitopia Logo" class="footer-logo-img">
+          <h3>Femitopia</h3>
+          <p>A safe space for queer women to connect, understand, and support each other.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#vision">Our Vision</a></li>
+            <li><a href="#zipolite">About Zipolite</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres near Playa Zipolite, Oaxaca, México</p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:femitopiaMX@gmail.com">femitopiaMX@gmail.com</a></p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/femitopiamx/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Femitopia. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Logo -->
+  <a href="#home" class="floating-logo">
+    <img src="images/logo.jpg" alt="Back to Top">
+  </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
