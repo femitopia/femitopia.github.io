@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialize EmailJS with your public key
+      emailjs.init('YOUR_PUBLIC_KEY');
+    })();
+  </script>
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .facilities-grid {
@@ -60,12 +68,16 @@
 
   <!-- Hero Section with Full-width Image -->
   <header id="home" class="hero">
-    <div class="hero-image" style="background-image: url('images/beach.jpg');">
+    <div class="hero-image" style="background-image: url('images/sunset.jpg');">
       <div class="hero-overlay">
         <div class="container">
           <h1>FIND YOUR PLACE</h1>
           <p class="tagline">CREATING TOGETHER</p>
           <h2>Welcome to Femitopia!</h2>
+          <div class="hero-description">
+            <p>Ever dreamed of a place to escape to—a sanctuary where you can connect with like-minded women from around the world, learn new skills, collaborate, and unwind together amidst the beauty of the beach and forest?</p>
+            <p>Femitopia is that safe haven—a vibrant community offering volunteering, coworking, festivals, vacations, workshops, and more—whether you come to grow, create, or simply relax and recharge.</p>
+          </div>
           <a href="#contact" class="btn btn-primary">Join Our Community</a>
         </div>
       </div>
@@ -85,7 +97,7 @@
         <img src="images/forest.jpg" alt="Lush forest view at Femitopia">
       </div>
       <div class="gallery-item">
-        <img src="images/beach2.jpg" alt="Beautiful beach at Femitopia">
+        <img src="images/beach2.jpg" alt="Beautiful beach at Zipolite">
       </div>
       <div class="gallery-item">
         <img src="images/sunset.jpg" alt="Sunset at Femitopia">
@@ -116,7 +128,7 @@
       <h2>Get Inspired</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="images/beach.jpg" alt="Beautiful beach at Femitopia" data-large="images/beach.jpg">
+          <img src="images/beach.jpg" alt="Beautiful beach at Zipolite" data-large="images/beach.jpg">
         </div>
         <div class="gallery-item">
           <img src="images/forest.jpg" alt="Lush forest view at Femitopia" data-large="images/forest.jpg">
@@ -146,7 +158,7 @@
 
   <!-- About Zipolite Section with Full-width Image -->
   <section id="zipolite" class="section">
-    <div class="full-width-image" style="background-image: url('images/up view zipolite.jpg');">
+    <div class="full-width-image" style="background-image: url('images/zipolite town.jpg');">
       <div class="image-overlay">
         <h2>About Zipolite</h2>
       </div>
@@ -279,6 +291,33 @@
     </div>
   </section>
 
+  <!-- Map Section -->
+  <section id="map" class="section">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1920.7195797176248!2d-96.528225!3d15.674826000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85b929592f9fc5c7%3A0xa7ef568b133ccfcb!2sFemitopia!5e0!3m2!1sen!2sus!4v1749321646761!5m2!1sen!2sus" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Femitopia Location">
+        </iframe>
+        <p style="text-align: center; margin-top: 1rem;">
+          <i class="fas fa-map-marker-alt"></i> MFFC+XJ Arroyo Tres, Oaxaca, Mexico
+        </p>
+      </div>
+      <div class="location-details">
+        <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres, near Playa Zipolite, Oaxaca, México</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+5211234567890">+52 112 345 6789</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:femitopiaMX@gmail.com">femitopiaMX@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
@@ -292,7 +331,9 @@
             <a href="https://www.instagram.com/femitopiamx/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-        <form class="contact-form" action="https://formspree.io/f/xpzvbazn" method="POST">
+        <form class="contact-form" action="mailto:femitopiaMX@gmail.com" method="post" enctype="text/plain">
+          <input type="hidden" name="subject" value="New message from Sunset at Zipolite" >
+          
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required>
           </div>
@@ -300,7 +341,7 @@
             <input type="email" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="body" placeholder="Your Message" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
@@ -349,5 +390,6 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script src="js/netlify-form.js"></script>
 </body>
 </html>

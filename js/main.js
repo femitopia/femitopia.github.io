@@ -1,4 +1,48 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const captionText = document.getElementById('caption');
+    const closeBtn = document.querySelector('.close-lightbox');
+
+    // Open lightbox when clicking on gallery images
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            lightbox.classList.add('show');
+            lightboxImg.src = this.getAttribute('data-large') || this.src;
+            lightboxImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        });
+    });
+
+    // Close lightbox when clicking the close button
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('show')) {
+            closeLightbox();
+        }
+    });
+
+    function closeLightbox() {
+        if (lightbox) {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            // Reset the image source to empty when closing
+            setTimeout(() => {
+                if (lightboxImg) lightboxImg.src = '';
+            }, 300); // Wait for the fade-out animation to complete
+        }
+    }
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -77,24 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Form submission handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = new FormData(contactForm);
-            const formValues = Object.fromEntries(formData.entries());
-            
-            // Here you would typically send the form data to a server
-            console.log('Form submitted:', formValues);
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+    // Form submission is now handled by the browser's default mailto: action
     
     // Add animation on scroll
     const animateOnScroll = function() {
