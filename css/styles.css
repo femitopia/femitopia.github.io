@@ -425,12 +425,15 @@ body {
 .hero {
   position: relative;
   color: #FFA386;  /* Text color */
-  background: #F7E4DE;  /* Background color */
+  background: #F7E4DE;  /* Fallback background color */
   margin-bottom: 0;
   overflow: hidden;
   min-height: 100vh;  /* Make hero section at least full viewport height */
   display: flex;
   align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-image {
@@ -441,8 +444,11 @@ body {
   bottom: 0;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;  /* Creates a parallax effect */
+  background-attachment: scroll;  /* Changed from fixed to scroll for better mobile support */
   z-index: 1;
+  -webkit-background-size: cover;  /* For older mobile browsers */
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .hero-overlay {
@@ -1146,6 +1152,41 @@ body {
   
   .carousel-slide img {
     height: 300px;
+  }
+  
+  /* Mobile hero section adjustments */
+  .hero {
+    min-height: 80vh; /* Slightly smaller on mobile */
+    height: auto;
+  }
+  
+  .hero-overlay {
+    min-height: 80vh;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .hero .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    display: block;
+    max-width: 200px;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+    text-align: center;
   }
 }
 
