@@ -12,11 +12,20 @@
 
     gtag('config', 'G-Q7ZX9DDJQF');
   </script>
-
   <!-- Redirect after short delay to let GA register the hit -->
-  <meta http-equiv="refresh" content="0.1;url=https://www.instagram.com/femitopiamx" />
+  <script>
+    function openInstagram() {
+      // Try opening the Instagram app deep link
+      window.location = "instagram://user?username=femitopiamx";
+
+      // After 1.5 seconds, fallback to the web Instagram page
+      setTimeout(function() {
+        window.location = "https://www.instagram.com/femitopiamx/";
+      }, 1500);
+    }
+  </script>
 </head>
-<body>
+<body onload="openInstagram()">
   <p>Getting you closer to femitopia...</p>
 </body>
 </html>
