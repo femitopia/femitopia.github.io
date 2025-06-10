@@ -1008,8 +1008,15 @@ body {
 }
 
 /* Modern Carousel Gallery */
+.section {
+  padding: 0;  /* No padding */
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
 .carousel-section {
-  padding: 3rem 0;
+  padding: 0;  /* No padding */
   background-color: var(--white);
   position: relative;
   overflow: hidden;
@@ -1178,19 +1185,20 @@ body {
   
   /* Remove margin and padding from sections on mobile */
   .section {
-    padding: 0.5rem 0;  /* Reduced from 1.5rem */
+    padding: 0;  /* No padding */
+    margin: 0;
   }
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding-top: 0;
-    margin-top: -2px; /* Pull up more to remove any gap */
+    padding-top: 0 !important;
+    margin-top: -8px !important; /* Pull up as much as possible */
   }
   
   /* Ensure no margin or padding on containers */
   .container {
-    padding: 0 0.5rem;  /* Reduced from 1rem */
-    margin: 0;
+    padding: 0 0.25rem !important; /* Minimal padding */
+    margin: 0 !important;
   }
   
   /* Reduce spacing in about content */
@@ -2229,13 +2237,11 @@ body {
   padding: 4rem 0;
   background-color: #fff;
 }
-
 #dream .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 0.25rem; /* Minimal padding */
 }
-
 #dream .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
