@@ -435,6 +435,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -40px !important; /* Increased negative margin to reduce space */
 }
 
 .hero-image {
@@ -463,7 +464,7 @@ body {
   z-index: 2;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Align content to bottom */
   justify-content: center;
   text-align: center;
   background: linear-gradient(
@@ -472,7 +473,7 @@ body {
     rgba(0, 0, 0, 0.3) 50%,
     rgba(0, 0, 0, 0.7) 100%
   );
-  padding: 2rem 0;
+  padding: 0 0 2rem 0; /* Reduced padding */
 }
 
 .hero-content {
@@ -624,6 +625,7 @@ body {
 .about-text {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .about-image {
@@ -650,23 +652,48 @@ body {
   line-height: 1.8;
   color: #FF7F50;  /* Coral color */
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .about-image {
     order: 1;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto 2rem;
+    max-width: 100%;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
   }
   
   .about-text {
     order: 2;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .about-text p {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+  }
+  
+  #vision .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  #vision .mid-heading {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1009,10 +1036,16 @@ body {
 
 /* Modern Carousel Gallery */
 .section {
-  padding: 0;  /* No padding */
+  padding: 0;  
   position: relative;
   overflow: hidden;
   margin: 0;
+}
+
+#dream {
+  padding: 0 !important;
+  margin-top: -20px !important; /* Pull up the section */
+  position: relative;
 }
 
 .carousel-section {
@@ -1191,8 +1224,8 @@ body {
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding-top: 0;
-    margin-top: -4px; /* Pull up slightly to remove any gap */
+    padding-top: 0 !important;
+    margin-top: -20px !important; /* Pull up more to reduce gap */
   }
   
   /* Ensure no margin or padding on containers */
