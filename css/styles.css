@@ -418,14 +418,14 @@ img {
 
 /* Hero Section */
 body {
-  background-color: #F7E4DE;  /* Main page background */
+  background-color: #fff;  /* Changed to white */
   color: #FFA386;  /* Main text color */
 }
 
 .hero {
   position: relative;
   color: #FFA386;  /* Text color */
-  background: #F7E4DE;  /* Fallback background color */
+  background: transparent;  /* Removed pink background */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -469,10 +469,10 @@ body {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
     rgba(0, 0, 0, 0.7) 100%
   );
-  padding: 2rem 0;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-content {
