@@ -709,6 +709,7 @@ body {
   padding: 1rem;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .zipolite-image-section .image-overlay h2 {
@@ -1171,23 +1172,48 @@ body {
     height: 100vh;
     max-height: 100vh;
     position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove margin and padding from sections on mobile */
+  .section {
+    padding: 0.5rem 0;  /* Reduced from 1.5rem */
+  }
+  
+  /* Adjust the hero section that follows the hero image */
+  #dream {
+    padding-top: 0;
+    margin-top: -2px; /* Pull up more to remove any gap */
+  }
+  
+  /* Ensure no margin or padding on containers */
+  .container {
+    padding: 0 0.5rem;  /* Reduced from 1rem */
+    margin: 0;
+  }
+  
+  /* Reduce spacing in about content */
+  .about-content {
+    gap: 0.5rem;  /* Reduced from 1.5rem */
   }
   
   .hero-overlay {
     min-height: 100%;
     height: 100%;
-    padding: 2rem 1rem;
+    padding: 0.5rem;  /* Reduced from 1rem */
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
   }
   
   .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;  /* Slightly smaller on mobile */
+    margin-bottom: 0.75rem;  /* Reduced from 1.5rem */
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 0.5rem;  /* Reduced from 1rem */
   }
   
   .hero .btn {
