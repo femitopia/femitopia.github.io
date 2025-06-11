@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-  /* Lesbian Pride Color Palette */
+  /* Color Palette */
   --lesbian-1: #D52D00;  /* Dark Orange */
   --lesbian-2: #FF9A56;  /* Light Orange */
   --lesbian-3: #FFFFFF;  /* White */
@@ -435,7 +435,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -80px !important; /* Increased negative margin to remove space */
+  margin-bottom: -200px !important; /* Increased negative margin to remove space */
 }
 
 .hero-image {
@@ -496,7 +496,7 @@ body {
 }
 
 .hero-description p:last-child {
-  margin-top: 3rem;  /* Extra space before the second paragraph */
+  margin-top: 1rem;  /* Extra space before the second paragraph */
   font-weight: 500;
 }
 
