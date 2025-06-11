@@ -1721,20 +1721,27 @@ section h2::after {
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
-    padding: 0 0.6rem;
-    gap: 0.5rem;
+    padding: 0 0.5rem;
+    gap: 0.4rem;
   }
   
   .gallery-caption {
-    font-size: 0.5rem;
-    padding: 0.2rem;
     display: none; /* Hide captions on mobile */
   }
   
   .gallery-item {
     aspect-ratio: 1/1;
-    max-width: 100px; /* Limit maximum size */
-    margin: 0 auto; /* Center items */
+    width: 100%;
+    max-width: none;
+    padding-bottom: 100%; /* Maintain aspect ratio */
+    position: relative;
+  }
+  
+  .gallery-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
