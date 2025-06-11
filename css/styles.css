@@ -613,9 +613,12 @@ body {
 
 /* Dream Section */
 #dream .about-text p {
-  color: #FF7F50 !important;  /* Coral color */
+  color: var(--coral) !important;
   margin-top: 0;
   padding-top: 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 /* About Content Layout */
@@ -641,8 +644,8 @@ body {
 }
 
 .about-text p {
-  color: #333;
-  font-size: 1.1rem;
+  color: var(--coral);
+  font-size: 1.2rem;
   line-height: 1.8;
   margin: 0 0 1.5rem 0;
   padding: 0;
@@ -1231,6 +1234,37 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+#vision .about-content {
+  flex-direction: column;
+}
+
+#vision .about-text {
+  order: 1;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#vision .about-image {
+  order: 2;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#vision .about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .zipolite-text .about-text {
@@ -1241,7 +1275,7 @@ body {
 }
 
 .zipolite-text .about-text p {
-  color: #555;
+  color: var(--coral);
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0 auto;
@@ -1331,6 +1365,25 @@ body {
   .hero-content {
     padding: 1rem;
     text-align: center;
+  }
+  
+  /* Zipolite Text Section Mobile */
+  .zipolite-text {
+    padding: 2rem 0;
+  }
+  
+  .zipolite-text .about-content {
+    padding: 0 1.5rem;
+  }
+  
+  .zipolite-text .about-text {
+    padding: 1rem 0;
+  }
+  
+  .zipolite-text .about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 100%;
   }
 }
 
