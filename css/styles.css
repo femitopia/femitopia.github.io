@@ -1720,11 +1720,11 @@ section h2::after {
 
 @media (max-width: 768px) {
   .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for more items */
+    gap: 0.3rem;
     padding: 0 0.5rem;
-    gap: 0.5rem;
+    width: 100%;
   }
   
   .gallery-caption {
@@ -1732,15 +1732,15 @@ section h2::after {
   }
   
   .gallery-item {
-    width: calc(25% - 0.5rem); /* 4 items per row with gap */
-    padding-bottom: calc(25% - 0.5rem); /* Maintain square aspect ratio */
-    position: relative;
-    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 1/1; /* Perfect square */
+    overflow: hidden;
   }
   
   .gallery-item img {
-    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     height: 100%;
     object-fit: cover;
   }
