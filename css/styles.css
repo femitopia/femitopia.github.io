@@ -543,6 +543,9 @@ body {
   .hero h2 {
     font-size: 2.5rem;
     padding: 0 1rem;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -1236,6 +1239,15 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 1rem;
   }
   
   /* Remove margin and padding from sections on mobile */
