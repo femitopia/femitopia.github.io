@@ -118,13 +118,18 @@ img {
 
 .container {
   width: 100%;
-  max-width: var(--container-width);
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 2rem 0;  /* Reduced default section padding */
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .bg-light {
@@ -542,11 +547,14 @@ body {
 }
 
 .hero-description {
-  max-width: 700px;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto 2.5rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease 0.9s forwards;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .hero-description p {
@@ -556,14 +564,21 @@ body {
   margin: 0 auto 1.2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   text-align: center;
-  max-width: 80%;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .hero-description p:last-child {
   font-weight: 500;
   font-style: italic;
-  max-width: 700px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 5px;
+  box-sizing: border-box;
+  white-space: normal;
 }
 
 .hero .btn {
@@ -603,24 +618,51 @@ body {
 /* About Content Layout */
 .about-content {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
+  align-items: flex-start;
   margin: 0;
-  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-text {
   flex: 1;
-  min-width: 0;
+  min-width: 300px;
+  padding: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: visible;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.about-text p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
   width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  hyphens: auto;
 }
 
 .about-image {
   flex: 1;
-  min-width: 0;
-  border-radius: 8px;
+  min-width: 300px;
+  position: relative;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .about-image img {
@@ -632,14 +674,6 @@ body {
 
 .about-image:hover img {
   transform: scale(1.03);
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #FF7F50;  /* Coral color */
-  margin-bottom: 1.5rem;
-  width: 100%;
 }
 
 /* Responsive adjustments */
@@ -691,6 +725,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-top: -3rem;  /* Pull up the section */
 }
 
 .zipolite-image-section .full-width-image {
@@ -1332,7 +1367,7 @@ body {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 0.4rem;
   padding: 0 1.2rem;
   margin: 0 auto;
@@ -1826,7 +1861,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
@@ -2256,22 +2290,37 @@ body {
 #dream {
   padding: 4rem 0;
   background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 #dream .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.25rem; /* Minimal padding */
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 #dream .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 #dream .about-text {
-  padding: 0;
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
   text-align: left;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #dream .about-text p {
@@ -2279,15 +2328,20 @@ body {
   line-height: 1.7;
   color: #555;
   margin: 0;
+  width: 100%;
 }
 
 #dream .about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  height: 400px; /* Fixed height for consistency */
-  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #dream .about-image .slideshow-container {
