@@ -1228,13 +1228,16 @@ body {
 }
 
 .zipolite-text .about-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .zipolite-text .about-text {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .zipolite-text .about-text p {
@@ -1242,7 +1245,7 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 /* Responsive adjustments */
