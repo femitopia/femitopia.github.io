@@ -728,7 +728,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: -3rem;  /* Pull up the section */
+  margin-top: 0;
 }
 
 .zipolite-image-section .full-width-image {
@@ -1217,6 +1217,32 @@ body {
 .carousel-dot.active {
   background-color: var(--accent-color);
   transform: scale(1.1);
+}
+
+/* Zipolite Text Section */
+.zipolite-text {
+  background-color: #fff;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.zipolite-text .about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zipolite-text .about-text {
+  text-align: center;
+  padding: 2rem;
+}
+
+.zipolite-text .about-text p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 /* Responsive adjustments */
