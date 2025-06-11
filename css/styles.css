@@ -435,7 +435,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -40px !important; /* Increased negative margin to reduce space */
+  margin-bottom: -60px !important; /* Increased negative margin to remove space */
 }
 
 .hero-image {
@@ -612,6 +612,8 @@ body {
 /* Dream Section */
 #dream .about-text p {
   color: #FF7F50 !important;  /* Coral color */
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* About Content Layout */
@@ -619,7 +621,8 @@ body {
   display: flex;
   align-items: center;
   gap: 3rem;
-  margin: 2rem 0;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .about-text {
