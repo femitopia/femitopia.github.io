@@ -1241,23 +1241,65 @@ body {
   gap: 3rem;
 }
 
-#vision .about-content {
+/* Vision Section Layout */
+#vision .container {
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-#vision .about-text {
-  order: 1;
+#vision .mid-heading {
   width: 100%;
-  max-width: 100%;
+  text-align: center;
   margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+#vision .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
 #vision .about-image {
   order: 2;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   text-align: center;
+}
+
+#vision .about-text {
+  order: 3;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+  #vision .about-content {
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  #vision .about-text {
+    order: 1;
+    flex: 1;
+    text-align: left;
+    padding: 0;
+  }
+  
+  #vision .about-image {
+    order: 2;
+    flex: 1;
+    margin: 0;
+  }
 }
 
 #vision .about-image img {
