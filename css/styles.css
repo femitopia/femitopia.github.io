@@ -1007,6 +1007,60 @@ section h2::after {
   }
 }
 
+/* Vision Section */
+#vision .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+#vision .about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+#vision .about-image {
+  flex: 1.5;
+  min-width: 50%;
+  max-width: 700px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  display: block;
+}
+
+#vision .about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  #vision .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #vision .about-image {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  #vision .about-image img {
+    max-height: 80vh;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 .zipolite-text .about-text p {
   color: #FF7F50;  /* Coral color */
   font-size: 1.1rem;
@@ -1608,8 +1662,8 @@ section h2::after {
   transform: translateY(0);
 }
 
-/* Slideshow Styles */
-.about-image {
+/* Carousel Styles */
+#dream .about-image {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -1617,17 +1671,19 @@ section h2::after {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 500px; /* Fixed height for the container */
+  aspect-ratio: 4/3; /* Better aspect ratio for carousel */
+  height: auto;
 }
 
-.slideshow-container {
+#dream .slideshow-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 8px;
 }
 
-.slide {
+#dream .slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -1637,19 +1693,19 @@ section h2::after {
   transition: opacity 0.5s ease-in-out;
 }
 
-.slide.active {
+#dream .slide.active {
   opacity: 1;
 }
 
-.slide img {
+#dream .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .slideshow-controls {
@@ -1714,6 +1770,16 @@ section h2::after {
     padding: 0 15px;
     margin: 0;
     box-sizing: border-box;
+  }
+  
+  .about-image {
+    aspect-ratio: 1/1; /* Square on mobile */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slideshow-container {
+    padding-bottom: 100%; /* 1:1 aspect ratio for mobile */
   }
   
   .gallery-grid {
@@ -2885,33 +2951,26 @@ section h2::after {
 
 #dream .about-text {
   flex: 1;
-  min-width: 300px;
-  padding: 2rem;
-  text-align: left;
-  box-sizing: border-box;
   max-width: 600px;
-  margin: 0 auto;
-}
-
-#dream .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin: 0;
-  width: 100%;
 }
 
 #dream .about-image {
   flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  position: relative;
-  border-radius: 15px;
+  max-width: 500px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  height: 400px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dream .about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 #dream .about-image .slideshow-container {
@@ -2935,21 +2994,28 @@ section h2::after {
   position: relative;
 }
 
-#dream .about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #dream .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
   }
   
-  #dream .about-text {
-    order: -1;
+  .about-text,
+  .about-image {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .about-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
   }
 }
 
@@ -3109,12 +3175,6 @@ section h2::after {
 
 #dream .about-image:hover {
   transform: translateY(-5px);
-}
-
-#dream .about-image img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 #dream .about-text {
