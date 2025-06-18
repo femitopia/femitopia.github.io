@@ -3819,7 +3819,17 @@ section h2::after {
     display: block;
     margin: 0.5rem 0;
     line-height: 1.5;
-    white-space: pre-line;
+    white-space: nowrap;
+  }
+  
+  .instagram-link {
+    color: #333;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  
+  .instagram-link:hover {
+    text-decoration: underline;
   }
   
   /* Ensure Instagram handles are lowercase */
