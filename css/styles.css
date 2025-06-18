@@ -1522,6 +1522,27 @@ section h2::after {
   }
 }
 
+/* Stay With Us Section */
+#stay-with-us {
+  padding: 6rem 0 4rem;  /* Increased top padding */
+  position: relative;
+  background-color: var(--light-bg);
+  text-align: center;
+}
+
+#stay-with-us .section-header h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+#stay-with-us .coral-centered-text {
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 /* Gallery Section */
 #inspired {
   padding: 2rem 0;
