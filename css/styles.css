@@ -3607,8 +3607,24 @@ section h2::after {
 @media (max-width: 768px) {
   #stay-with-us.section,
   #facilities.section,
-  #volunteer.section {
+  #volunteer.section,
+  #dream.section {
     padding: 1.5rem 0;
+  }
+  
+  /* Ensure text comes before image on mobile */
+  #dream .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #dream .about-text {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  #dream .about-image {
+    order: 2;
   }
   
   .social-links p {
