@@ -1061,8 +1061,26 @@ section h2::after {
   }
 }
 
-.zipolite-text .about-text p {
+/* Update zipolite text styles */
+.zipolite-text {
+  color: #333;  /* Dark color for better readability */
+}
+
+/* Make the zipolite description text coral */
+#zipolite .about-text p {
   color: #FF7F50;  /* Coral color */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zipolite-text .about-text p {
+  color: #333;  /* Dark color for better readability */
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -1071,6 +1089,78 @@ section h2::after {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem; /* Add padding for better mobile reading */
+}
+
+/* Join section styles */
+#join .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#join h2 {
+  text-align: center;
+  margin: 0 auto 3rem;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 600;
+  width: 100%;
+  line-height: 1.3;
+  order: 1;
+}
+
+#join .about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  order: 2;
+  width: 100%;
+}
+
+#join .about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#join .about-text p {
+  color: #FF7F50;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0;
+  text-align: left;
+}
+
+#join .about-image {
+  flex: 1;
+  min-width: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#join .about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#join .about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure headings in zipolite-text are visible */
+.zipolite-text h2,
+.zipolite-text h3,
+.zipolite-text h4 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 /* Zipolite Image Section */
@@ -3618,6 +3708,38 @@ section h2::after {
     flex-direction: column;
   }
   
+  /* Slideshow container styles */
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    position: relative;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   #dream .about-text {
     order: 1;
     margin-bottom: 1.5rem;
@@ -3632,6 +3754,55 @@ section h2::after {
     margin: 1.5rem 0 0 0;
     padding: 0 1rem;
     box-sizing: border-box;
+  }
+  
+  /* Join us section mobile layout */
+  #join {
+    color: #333; /* Ensure default text color is visible */
+  }
+  
+  /* Mobile styles for join section */
+  #join .container {
+    padding: 2rem 1rem;
+  }
+  
+  #join h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    order: 1 !important;
+  }
+  
+  #join .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    order: 2 !important;
+    width: 100%;
+  }
+  
+  #join .about-text {
+    order: 2 !important;
+    width: 100%;
+    padding: 0;
+  }
+  
+  #join .about-text p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  #join .about-image {
+    order: 1 !important;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  #join .about-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
   }
   
   .social-links p {
