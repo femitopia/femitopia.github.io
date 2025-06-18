@@ -3612,7 +3612,7 @@ section h2::after {
     padding: 1.5rem 0;
   }
   
-  /* Ensure text comes before image on mobile */
+  /* Ensure text comes before image on mobile for dream section */
   #dream .about-content {
     display: flex;
     flex-direction: column;
@@ -3621,10 +3621,17 @@ section h2::after {
   #dream .about-text {
     order: 1;
     margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
   
   #dream .about-image {
     order: 2;
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
   
   .social-links p {
