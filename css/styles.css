@@ -3605,10 +3605,20 @@ section h2::after {
 }
 
 @media (max-width: 768px) {
+  #stay-with-us.section,
+  #facilities.section {
+    padding: 2rem 0;
+  }
+  
+  #stay-with-us .container,
+  #facilities .container {
+    padding: 0 1rem;
+  }
+  
   .compact-stay-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
-    margin: 2rem auto 0;
+    margin: 1.5rem auto 0;
   }
   
   .compact-stay-card {
@@ -3617,6 +3627,7 @@ section h2::after {
   
   #stay-with-us h2 {
     font-size: 1.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 
