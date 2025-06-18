@@ -3614,6 +3614,7 @@ section h2::after {
   .social-links p {
     display: block;
     margin: 0.5rem 0;
+    line-height: 1.5;
   }
   
   /* Ensure Instagram handles are lowercase */
