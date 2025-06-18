@@ -2868,6 +2868,10 @@ section h2::after {
 
 .contact-info {
   margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-info p {
@@ -2876,6 +2880,9 @@ section h2::after {
   align-items: center;
   gap: 1rem;
   color: #000000;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .contact-info a {
@@ -2891,35 +2898,83 @@ section h2::after {
 
 .contact-info i {
   color: var(--lesbian-5);
-  font-size: 1.2rem;
-  width: 30px;
+  font-size: 1.4rem;
+  min-width: 30px;
   text-align: center;
 }
 
 .social-links {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 248, 0.95));
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.social-links p {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.social-links p:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #405DE6, #E1306C);
+  border-radius: 3px;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--lesbian-5);  /* Coral color to match the theme */
+  width: 80px;  /* Increased from 60px */
+  height: 80px;  /* Increased from 60px */
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
   color: #ffffff;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 2.8rem;  /* Increased from 2rem */
+  box-shadow: 0 6px 20px rgba(193, 53, 132, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-links a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
 }
 
 .social-links a:hover {
-  background-color: var(--lesbian-1);  /* Darker coral on hover */
-  transform: scale(1.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(193, 53, 132, 0.4);
+  border-radius: 50%;
+}
+
+.social-links a:hover:before {
+  left: 100%;
 }
 
 /* Dream Section */
@@ -3979,6 +4034,44 @@ section h2::after {
   
   .btn {
     padding: 0.6rem 1.5rem;
+  }
+  
+  /* Contact Section Mobile Styles */
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .contact-info p {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .social-links p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .social-links a {
+    margin: 0;
+    width: 70px;  /* Increased from 45px */
+    height: 70px;  /* Increased from 45px */
+    font-size: 2.2rem;  /* Increased from 1.6rem */
   }
 }
 
