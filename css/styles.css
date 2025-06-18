@@ -3606,8 +3606,26 @@ section h2::after {
 
 @media (max-width: 768px) {
   #stay-with-us.section,
-  #facilities.section {
-    padding: 2rem 0;
+  #facilities.section,
+  #volunteer.section {
+    padding: 1.5rem 0;
+  }
+  
+  .social-links p {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  /* Ensure Instagram handles are lowercase */
+  .social-links p,
+  #social-media p {
+    text-transform: lowercase !important;
+    font-variant: normal !important;
+  }
+  
+  #facilities .container,
+  #volunteer .container {
+    padding: 0 1rem;
   }
   
   #stay-with-us .container,
