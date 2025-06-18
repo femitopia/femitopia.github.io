@@ -1601,10 +1601,10 @@ section h2::after {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
-    padding: 1rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem 0;
     margin: 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 100vw;
     scrollbar-width: none; /* Firefox */
   }
   
@@ -1616,8 +1616,8 @@ section h2::after {
     flex: 0 0 80%;
     scroll-snap-align: start;
     min-width: 280px;
-    height: 200px;
-    aspect-ratio: auto;
+    height: 280px; /* Fixed height to match width */
+    aspect-ratio: 1/1; /* Square aspect ratio */
   }
   
   .gallery-caption {
@@ -1632,10 +1632,19 @@ section h2::after {
 
 /* Container styles */
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+/* Full width container for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
 }
 
 /* Inspired section heading */
@@ -1674,12 +1683,11 @@ section h2::after {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* Square aspect ratio */
   width: 100%;
-  height: 100%;
   display: block;
-  cursor: default;
-  pointer-events: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item img {
