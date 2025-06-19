@@ -4355,7 +4355,7 @@ section h2::after {
     margin-top: 1.5rem;
     width: 100%;
     height: 0;
-    padding-bottom: 100%; /* Makes it square by default */
+    padding-bottom: 150%; /* Makes it taller than wide */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -4369,7 +4369,7 @@ section h2::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%; /* Adjust this to show the best part of the image */
+    object-position: center top; /* Shows the top of the image */
     border-radius: 10px;
   }
 }
