@@ -3809,7 +3809,7 @@ section h2::after {
   }
   
   #dream.section {
-    padding: 4rem 0 1.5rem; /* More padding at the top for dream section */
+    padding: 6rem 0 1rem; /* Reduced bottom padding from 2rem to 1rem */
   }
   
   /* Ensure text comes before image on mobile for dream section */
@@ -3852,26 +3852,28 @@ section h2::after {
   
   #dream .about-text {
     order: 1;
-    margin: 0 0 2rem 0;  /* Increased margin below text */
+    margin: 0 auto 2rem;  /* Center the text block */
     width: 100%;
-    padding: 0 0.5rem;  /* Reduced horizontal padding */
+    max-width: 600px;  /* Match zipolite text width */
+    padding: 0 1.5rem;  /* Match zipolite padding */
     box-sizing: border-box;
     position: relative;
     z-index: 1;  /* Ensure text stays above other elements */
-    max-width: 100%;
   }
   
   #dream .about-text p {
     font-size: 1.1rem;  /* Slightly larger text for better readability */
     line-height: 1.7;  /* Increased line height for better readability */
     margin: 0;
-    padding: 1rem 0;  /* Added vertical padding */
+    padding: 0.5rem 0;  /* Reduced vertical padding */
+    text-align: center;  /* Center align text like zipolite */
   }
   
   #dream .about-image {
     order: 2;
     width: 100%;
-    margin: 1.5rem 0 0 0;
+    max-width: 800px;  /* Match zipolite image width */
+    margin: 0 auto;  /* Center the image */
     padding: 0 1rem;
     box-sizing: border-box;
   }
