@@ -1640,6 +1640,7 @@ section h2::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
   }
   
   .hero-content {
@@ -1656,8 +1657,8 @@ section h2::after {
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding-top: 2rem !important; /* Add some padding at the top */
-    margin-top: 0 !important;
+    padding: 6rem 0 0 0 !important; /* Significantly more padding at the top */
+    margin: 0 !important;
   }
   
   /* Ensure no margin or padding on containers */
@@ -3849,9 +3850,9 @@ section h2::after {
   
   #dream .about-text {
     order: 1;
-    margin: 2rem 0;  /* Increased vertical margin */
+    margin: 0 0 1rem 0;  /* Add margin below text */
     width: 100%;
-    padding: 0 1.5rem;  /* Increased side padding */
+    padding: 0 1.5rem;  /* Horizontal padding only */
     box-sizing: border-box;
     position: relative;
     z-index: 1;  /* Ensure text stays above other elements */
