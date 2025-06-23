@@ -1322,7 +1322,8 @@ section h2::after {
     width: 95%;
     max-width: 320px;
     margin: 0 auto;
-    height: 80px;  /* Further reduced height for better mobile viewing */
+    height: 40px;  /* Half of the previous 80px height */
+    max-height: 40px;  /* Also update max-height to match */
   }
 }
 
