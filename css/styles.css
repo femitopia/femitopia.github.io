@@ -1657,8 +1657,10 @@ section h2::after {
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding: 8rem 0 0 0 !important; /* Even more padding at the top */
+    padding: 10rem 1rem 0 1rem !important; /* More padding at the top and sides */
     margin: 0 !important;
+    max-width: 90%;
+    margin: 0 auto !important;
   }
   
   /* Ensure no margin or padding on containers */
@@ -3850,12 +3852,13 @@ section h2::after {
   
   #dream .about-text {
     order: 1;
-    margin: 0 0 1rem 0;  /* Add margin below text */
+    margin: 0 0 2rem 0;  /* Increased margin below text */
     width: 100%;
-    padding: 0 1.5rem;  /* Horizontal padding only */
+    padding: 0 0.5rem;  /* Reduced horizontal padding */
     box-sizing: border-box;
     position: relative;
     z-index: 1;  /* Ensure text stays above other elements */
+    max-width: 100%;
   }
   
   #dream .about-text p {
