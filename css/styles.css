@@ -3849,10 +3849,19 @@ section h2::after {
   
   #dream .about-text {
     order: 1;
-    margin-bottom: 1.5rem;
+    margin: 2rem 0;  /* Increased vertical margin */
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 1.5rem;  /* Increased side padding */
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;  /* Ensure text stays above other elements */
+  }
+  
+  #dream .about-text p {
+    font-size: 1.1rem;  /* Slightly larger text for better readability */
+    line-height: 1.7;  /* Increased line height for better readability */
+    margin: 0;
+    padding: 1rem 0;  /* Added vertical padding */
   }
   
   #dream .about-image {
