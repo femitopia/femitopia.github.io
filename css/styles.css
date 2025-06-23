@@ -1657,7 +1657,7 @@ section h2::after {
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding: 6rem 0 0 0 !important; /* Significantly more padding at the top */
+    padding: 8rem 0 0 0 !important; /* Even more padding at the top */
     margin: 0 !important;
   }
   
