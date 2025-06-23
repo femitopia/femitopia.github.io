@@ -3801,9 +3801,12 @@ section h2::after {
 @media (max-width: 768px) {
   #stay-with-us.section,
   #facilities.section,
-  #volunteer.section,
-  #dream.section {
+  #volunteer.section {
     padding: 1.5rem 0;
+  }
+  
+  #dream.section {
+    padding: 4rem 0 1.5rem; /* More padding at the top for dream section */
   }
   
   /* Ensure text comes before image on mobile for dream section */
