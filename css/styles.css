@@ -1631,9 +1631,9 @@ section h2::after {
   
   /* Mobile hero section adjustments */
   .hero {
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 100vh;
+    min-height: 90vh; /* Slightly smaller viewport height */
+    height: 90vh;
+    max-height: 90vh;
     position: relative;
     margin: 0;
     padding: 0;
@@ -1656,8 +1656,8 @@ section h2::after {
   
   /* Adjust the hero section that follows the hero image */
   #dream {
-    padding-top: 0 !important;
-    margin-top: -20px !important; /* Pull up more to reduce gap */
+    padding-top: 2rem !important; /* Add some padding at the top */
+    margin-top: 0 !important;
   }
   
   /* Ensure no margin or padding on containers */
