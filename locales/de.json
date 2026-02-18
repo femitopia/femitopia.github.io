@@ -72,10 +72,10 @@
   "vol_noskill_text": "Wir begrüßen alle Fähigkeitsstufen. Am wichtigsten ist deine Leidenschaft und Bereitschaft zu lernen.",
   "vol_cta": "Unserem Bauerteam beitreten",
   "map_title": "Uns finden",
-  "map_address": "MFFC+XJ Arroyo Tres, Oaxaca, Mexiko",
-  "map_location": "Arroyo Tres, in der Nähe von Playa Zipolite, Oaxaca, Mexiko",
+  "map_address": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, Mexiko",
+  "map_location": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, Mexiko",
   "contact_title": "Kontakt",
-  "contact_address": "Arroyo Tres in der Nähe von Playa Zipolite, Oaxaca, Mexiko",
+  "contact_address": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, Mexiko",
   "contact_follow": "Folge uns-@femitopiamx",
   "contact_name_placeholder": "Dein Name",
   "contact_email_placeholder": "Deine E-Mail",
@@ -90,5 +90,10 @@
   "footer_zipolite": "Über Zipolite",
   "footer_accommodations": "Unterkünfte",
   "footer_volunteer": "Freiwilligenarbeit",
-  "footer_contact": "Kontakt"
+  "footer_contact": "Kontakt",
+  "updates_title": "Aktuelles",
+  "updates_carpentry_date": "März – April 2026",
+  "updates_carpentry_title": "Lerne Tischlerei mit Uns",
+  "updates_carpentry_text": "Im März und April 2026 bieten wir die Möglichkeit, Tischlerei zu erlernen. Kontaktiere uns für weitere Informationen.",
+  "updates_carpentry_cta": "Kontakt aufnehmen"
 }

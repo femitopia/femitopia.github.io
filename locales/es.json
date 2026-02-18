@@ -72,10 +72,10 @@
   "vol_noskill_text": "Damos la bienvenida a todos los niveles de habilidad. Lo más importante es tu pasión y disposición para aprender.",
   "vol_cta": "Únete a Nuestro Equipo Constructor",
   "map_title": "Encuéntranos",
-  "map_address": "MFFC+XJ Arroyo Tres, Oaxaca, México",
-  "map_location": "Arroyo Tres, cerca de Playa Zipolite, Oaxaca, México",
+  "map_address": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, México",
+  "map_location": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, México",
   "contact_title": "Contáctanos",
-  "contact_address": "Arroyo Tres cerca de Playa Zipolite, Oaxaca, México",
+  "contact_address": "Calle Cresta 88, Arroyo Tres, 70947 Oaxaca, México",
   "contact_follow": "Síguenos-@femitopiamx",
   "contact_name_placeholder": "Tu Nombre",
   "contact_email_placeholder": "Tu Correo Electrónico",
@@ -90,5 +90,10 @@
   "footer_zipolite": "Sobre Zipolite",
   "footer_accommodations": "Alojamiento",
   "footer_volunteer": "Voluntariado",
-  "footer_contact": "Contacto"
+  "footer_contact": "Contacto",
+  "updates_title": "Actualizaciones",
+  "updates_carpentry_date": "Marzo – Abril 2026",
+  "updates_carpentry_title": "Aprende Carpintería con Nosotras",
+  "updates_carpentry_text": "En marzo y abril de 2026 ofreceremos una oportunidad para aprender carpintería. Contáctanos para más información.",
+  "updates_carpentry_cta": "Contáctanos"
 }

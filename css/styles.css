@@ -5086,6 +5086,42 @@ section h2::after {
   }
 }
 
+/* ── Updates Section ── */
+.updates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.update-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 2rem;
+  max-width: 600px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.update-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.update-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.update-card p {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
 /* ── Language Switcher ── */
 .lang-switcher {
   position: relative;
