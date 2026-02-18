@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,14 +66,27 @@
         <span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#discover-zipolite">About zipolite</a></li>
-        <li><a href="#join">Join us</a></li>
-        <li><a href="#stay-with-us">Accommodations</a></li>
-        <li><a href="#volunteer">Volunteer</a></li>
-        <li><a href="#map">Find us</a></li>
-        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+        <li><a href="#discover-zipolite" data-i18n="nav_zipolite">About Zipolite</a></li>
+        <li><a href="#join" data-i18n="nav_join">Join us</a></li>
+        <li><a href="#stay-with-us" data-i18n="nav_accommodations">Accommodations</a></li>
+        <li><a href="#volunteer" data-i18n="nav_volunteer">Volunteer</a></li>
+        <li><a href="#map" data-i18n="nav_find">Find us</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact us</a></li>
       </ul>
+      <div class="lang-switcher" id="lang-dropdown">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Select language">
+          <span id="lang-current">🇬🇧 EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="lang-menu">
+          <li><button class="lang-option active" data-lang="en">🇬🇧 English</button></li>
+          <li><button class="lang-option" data-lang="es">🇲🇽 Español</button></li>
+          <li><button class="lang-option" data-lang="fr">🇫🇷 Français</button></li>
+          <li><button class="lang-option" data-lang="de">🇩🇪 Deutsch</button></li>
+          <li><button class="lang-option" data-lang="pt">🇧🇷 Português</button></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -82,8 +95,8 @@
     <div class="hero-image" style="background-image: url('images/sunset.jpg');"></div>
     <div class="hero-content">
       <div class="container">
-        <h2>Welcome to Femitopia!</h2>
-        <a href="#contact" class="btn btn-primary">Join Our Community</a>
+        <h2 data-i18n="hero_welcome">Welcome to Femitopia!</h2>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Join Our Community</a>
       </div>
     </div>
   </header>
@@ -93,7 +106,7 @@
     <div class="container">
       <div class="about-content">
         <div class="about-text">
-          <p>Ever dreamed of a place to escape to—a sanctuary where you can connect with like-minded women from around the world, learn new skills, collaborate, and unwind together amidst the beauty of the beach and forest? Femitopia is that safe haven—a vibrant community offering volunteering, coworking, festivals, vacations, workshops, and more—whether you come to grow, create, or simply relax and recharge.</p>
+          <p data-i18n="dream_text">Ever dreamed of a place to escape to—a sanctuary where you can connect with like-minded women from around the world, learn new skills, collaborate, and unwind together amidst the beauty of the beach and forest? Femitopia is that safe haven—a vibrant community offering volunteering, coworking, festivals, vacations, workshops, and more—whether you come to grow, create, or simply relax and recharge.</p>
         </div>
         <div class="about-image">
           <div class="slideshow-container">
@@ -128,8 +141,8 @@
     <div class="parallax-image" style="background-image: url('images/zipolite town3.jpeg');">
       <div class="image-overlay">
         <div class="container">
-          <h2 class="animate-text" style="color: white !important; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">Discover Zipolite</h2>
-          <p class="subtitle">A hidden gem on Mexico's Pacific Coast</p>
+          <h2 class="animate-text" style="color: white !important; text-shadow: 0 2px 10px rgba(0,0,0,0.7);" data-i18n="discover_title">Discover Zipolite</h2>
+          <p class="subtitle" data-i18n="discover_subtitle">A hidden gem on Mexico's Pacific Coast</p>
         </div>
       </div>
     </div>
@@ -140,7 +153,7 @@
     <div class="container">
       <div class="about-content">
         <div class="about-text">
-          <p>Zipolite, located in Oaxaca, Mexico, is known for its peaceful atmosphere and nudist-friendly beach. Its 1.75 km of sandy coastline is perfect for swimming and surfing. Enjoy the consistent tropical weather. Visit charming towns like Mazunte, or head to Huatulco Bay and Puerto Escondido for more adventures. Spot wildlife such as dolphins, and migrating whales.</p>
+          <p data-i18n="zipolite_text">Zipolite, located in Oaxaca, Mexico, is known for its peaceful atmosphere and nudist-friendly beach. Its 1.75 km of sandy coastline is perfect for swimming and surfing. Enjoy the consistent tropical weather. Visit charming towns like Mazunte, or head to Huatulco Bay and Puerto Escondido for more adventures. Spot wildlife such as dolphins, and migrating whales.</p>
         </div>
       </div>
     </div>
@@ -160,23 +173,23 @@
         <div class="carousel-track">
           <div class="carousel-slide">
             <img src="images/coconut.jpeg" alt="Coconut in Zipolite" loading="lazy">
-            <div class="slide-caption">Tropical Delights</div>
+            <div class="slide-caption" data-i18n="caption_tropical">Tropical Delights</div>
           </div>
           <div class="carousel-slide">
             <img src="images/zipolite letters.jpeg" alt="Beautiful beach at Zipolite" loading="lazy">
-            <div class="slide-caption">Sandy Shores</div>
+            <div class="slide-caption" data-i18n="caption_sandy">Sandy Shores</div>
           </div>
           <div class="carousel-slide">
             <img src="images/zipolite town.jpg" alt="Zipolite town" loading="lazy">
-            <div class="slide-caption">Charming Streets</div>
+            <div class="slide-caption" data-i18n="caption_charming">Charming Streets</div>
           </div>
           <div class="carousel-slide">
             <img src="images/sunset5.jpeg" alt="Stunning sunset" loading="lazy">
-            <div class="slide-caption">Golden Hours</div>
+            <div class="slide-caption" data-i18n="caption_golden">Golden Hours</div>
           </div>
           <div class="carousel-slide">
             <img src="images/mojito2.jpg" alt="Refreshing mojito" loading="lazy">
-            <div class="slide-caption">Tropical Refreshments</div>
+            <div class="slide-caption" data-i18n="caption_refreshments">Tropical Refreshments</div>
           </div>
         </div>
         
@@ -268,10 +281,10 @@
   <!-- Join us Section with Side by Side Image -->
   <section id="join" class="section zipolite-text">
     <div class="container">
-      <h2>Join us in our journey</h2>
+      <h2 data-i18n="join_title">Join us in our journey</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Femitopia is a welcoming community where women come together to connect, heal, and support each other. Set by the ocean and rooted in love, respect, and eco-friendly values, we live, work, and grow side by side. Together, we're building meaningful connections and creating a lasting legacy of hope, empowerment, and shared purpose. Join us and be part of something truly special.</p>
+          <p data-i18n="join_text">Femitopia is a welcoming community where women come together to connect, heal, and support each other. Set by the ocean and rooted in love, respect, and eco-friendly values, we live, work, and grow side by side. Together, we're building meaningful connections and creating a lasting legacy of hope, empowerment, and shared purpose. Join us and be part of something truly special.</p>
         </div>
         <div class="about-image">
           <img src="images/hand.jpg" alt="Community connection" style="border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);">
@@ -283,25 +296,25 @@
   <!-- Get Inspired Section with Photo Gallery -->
   <section id="inspired" class="section">
     <div class="container">
-      <h2>Get Inspired</h2>
+      <h2 data-i18n="inspired_title">Get Inspired</h2>
       <div class="gallery-grid">
         <div class="gallery-item" style="background-image: url('images/amor beach.jpg')">
-          <div class="gallery-caption">La playa del amor</div>
+          <div class="gallery-caption" data-i18n="gallery_amor">La playa del amor</div>
         </div>
         <div class="gallery-item" style="background-image: url('images/beach.jpg')">
-          <div class="gallery-caption">Sunset Beach</div>
+          <div class="gallery-caption" data-i18n="gallery_sunset">Sunset Beach</div>
         </div>
         <div class="gallery-item" style="background-image: url('images/mojito.jpg')">
-          <div class="gallery-caption">Tropical Drinks</div>
+          <div class="gallery-caption" data-i18n="gallery_drinks">Tropical Drinks</div>
         </div>
         <div class="gallery-item" style="background-image: url('images/surfer.jpg')">
-          <div class="gallery-caption">Surf's Up</div>
+          <div class="gallery-caption" data-i18n="gallery_surf">Surf's Up</div>
         </div>
         <div class="gallery-item" style="background-image: url('images/turtle.jpg')">
-          <div class="gallery-caption">Marine Life</div>
+          <div class="gallery-caption" data-i18n="gallery_marine">Marine Life</div>
         </div>
         <div class="gallery-item" style="background-image: url('images/sunset8.jpeg')">
-          <div class="gallery-caption">Golden Hour</div>
+          <div class="gallery-caption" data-i18n="gallery_golden">Golden Hour</div>
         </div>
       </div>
     </div>
@@ -319,10 +332,10 @@
     <div class="community-message-overlay">
       <div class="container">
         <div class="community-message-content">
-          <h2 class="section-title" style="color: white;">Our Community</h2>
+          <h2 class="section-title" style="color: white;" data-i18n="community_title">Our Community</h2>
           <div class="divider"></div>
-          <p class="message-text">Bring your true self to our space. We're a community where everyone is open, honest, and ready to grow. If you love nature, being by the ocean, and feel comfortable in sex-positive, nudist spaces, you'll fit right in.</p>
-          <p class="message-text">Know your community, respect pronouns, bring your skills or be ready to learn, and keep an open heart. Together, we'll create something special.</p>
+          <p class="message-text" data-i18n="community_p1">Bring your true self to our space. We're a community where everyone is open, honest, and ready to grow. If you love nature, being by the ocean, and feel comfortable in sex-positive, nudist spaces, you'll fit right in.</p>
+          <p class="message-text" data-i18n="community_p2">Know your community, respect pronouns, bring your skills or be ready to learn, and keep an open heart. Together, we'll create something special.</p>
         </div>
       </div>
     </div>
@@ -332,33 +345,33 @@
   <section id="stay-with-us" class="section">
     <div class="container">
       <div class="section-header text-center">
-        <h2>Accommodations coming soon!</h2>
-        <p class="coral-centered-text">We're currently building our unique accommodations in the heart of nature</p>
+        <h2 data-i18n="stay_title">Accommodations coming soon!</h2>
+        <p class="coral-centered-text" data-i18n="stay_subtitle">We're currently building our unique accommodations in the heart of nature</p>
       </div>
       
       <div class="compact-stay-grid">
         <div class="compact-stay-card">
           <div class="compact-stay-image" style="background-image: url('images/house2.jpg');"></div>
           <div class="compact-stay-content">
-            <h3>Cozy Apartments</h3>
-            <p>Modern living spaces currently under construction, featuring solar lighting for an eco-conscious stay.</p>
+            <h3 data-i18n="stay_apt_title">Cozy Apartments</h3>
+            <p data-i18n="stay_apt_text">Modern living spaces currently under construction, featuring solar lighting for an eco-conscious stay.</p>
           </div>
         </div>
         
         <div class="compact-stay-card">
           <div class="compact-stay-image" style="background-image: url('images/plataform.jpg');"></div>
           <div class="compact-stay-content">
-            <h3>Rustic Cabins</h3>
-            <p>Charming wooden cabins in the planning phase, coming soon to complement our natural surroundings.</p>
+            <h3 data-i18n="stay_cabin_title">Rustic Cabins</h3>
+            <p data-i18n="stay_cabin_text">Charming wooden cabins in the planning phase, coming soon to complement our natural surroundings.</p>
           </div>
         </div>
         
         <div class="compact-stay-card">
           <div class="compact-stay-image" style="background-image: url('images/plataform2.jpg');"></div>
           <div class="compact-stay-content">
-            <h3>Camping Platforms</h3>
-            <p>Elevated platforms for a unique glamping experience, coming soon.</p>
-            <a href="#contact" class="btn-primary">Get Updates</a>
+            <h3 data-i18n="stay_camp_title">Camping Platforms</h3>
+            <p data-i18n="stay_camp_text">Elevated platforms for a unique glamping experience, coming soon.</p>
+            <a href="#contact" class="btn-primary" data-i18n="stay_camp_cta">Get Updates</a>
           </div>
         </div>
       </div>
@@ -368,28 +381,28 @@
   <!-- Facilities Section -->
   <section id="vision" class="section bg-light">
     <div class="container">
-      <h2>Our vision</h2>
-      <p class="coral-centered-text">We're working towards creating a vibrant community space with amenities including:</p>
+      <h2 data-i18n="vision_title">Our vision</h2>
+      <p class="coral-centered-text" data-i18n="vision_subtitle">We're working towards creating a vibrant community space with amenities including:</p>
       
       <div class="compact-facilities">
         <div class="facility-category">
-          <h3>Food & Drink</h3>
-          <p>Beer & Wine Shop • Coffee Shop • Restaurant • Ice Cream</p>
+          <h3 data-i18n="vision_food_title">Food & Drink</h3>
+          <p data-i18n="vision_food_text">Beer & Wine Shop • Coffee Shop • Restaurant • Ice Cream</p>
         </div>
         
         <div class="facility-category">
-          <h3>Wellness & Beauty</h3>
-          <p>Queer Beauty Salon & Barbershop • Yoga • Spa & Massages</p>
+          <h3 data-i18n="vision_wellness_title">Wellness & Beauty</h3>
+          <p data-i18n="vision_wellness_text">Queer Beauty Salon & Barbershop • Yoga • Spa & Massages</p>
         </div>
         
         <div class="facility-category">
-          <h3>Community Spaces</h3>
-          <p>Workshops • Live Music • Working Stations • Tattoo Studio</p>
+          <h3 data-i18n="vision_community_title">Community Spaces</h3>
+          <p data-i18n="vision_community_text">Workshops • Live Music • Working Stations • Tattoo Studio</p>
         </div>
         
         <div class="facility-category">
-          <h3>Services</h3>
-          <p>Car & Scooter Rental • Electronics and Tech Support</p>
+          <h3 data-i18n="vision_services_title">Services</h3>
+          <p data-i18n="vision_services_text">Car & Scooter Rental • Electronics and Tech Support</p>
         </div>
       </div>
     </div>
@@ -399,53 +412,53 @@
   <section id="volunteer" class="section bg-light">
     <div class="container">
       <div class="build-header text-center">
-        <h2>Help us build from the ground up</h2>
-        <p class="coral-centered-text">We're starting from scratch and need your skills to make this dream a reality.</p>
+        <h2 data-i18n="volunteer_title">Help us build from the ground up</h2>
+        <p class="coral-centered-text" data-i18n="volunteer_subtitle">We're starting from scratch and need your skills to make this dream a reality.</p>
       </div>
       
       <div class="build-grid">
         <div class="build-card">
           <div class="build-icon">🏗️</div>
-          <h3>Construction & Building</h3>
-          <p>Help us construct our eco-friendly structures, from foundations to finishes.</p>
+          <h3 data-i18n="vol_construction_title">Construction & Building</h3>
+          <p data-i18n="vol_construction_text">Help us construct our eco-friendly structures, from foundations to finishes.</p>
           <ul>
-            <li>Carpentry & Woodwork</li>
-            <li>Natural Building</li>
-            <li>Plumbing & Electrical</li>
-            <li>General Construction</li>
+            <li data-i18n="vol_construction_li1">Carpentry & Woodwork</li>
+            <li data-i18n="vol_construction_li2">Natural Building</li>
+            <li data-i18n="vol_construction_li3">Plumbing & Electrical</li>
+            <li data-i18n="vol_construction_li4">General Construction</li>
           </ul>
         </div>
         
         <div class="build-card">
           <div class="build-icon">🌱</div>
-          <h3>Land & Permaculture</h3>
-          <p>Shape our outdoor spaces with sustainable land management practices.</p>
+          <h3 data-i18n="vol_land_title">Land & Permaculture</h3>
+          <p data-i18n="vol_land_text">Shape our outdoor spaces with sustainable land management practices.</p>
           <ul>
-            <li>Permaculture Design</li>
-            <li>Organic Gardening</li>
-            <li>Water Systems</li>
-            <li>Compost & Soil Building</li>
+            <li data-i18n="vol_land_li1">Permaculture Design</li>
+            <li data-i18n="vol_land_li2">Organic Gardening</li>
+            <li data-i18n="vol_land_li3">Water Systems</li>
+            <li data-i18n="vol_land_li4">Compost & Soil Building</li>
           </ul>
         </div>
         
         <div class="build-card">
           <div class="build-icon">🎨</div>
-          <h3>Creative & Design</h3>
-          <p>Bring artistic vision to our spaces and community initiatives.</p>
+          <h3 data-i18n="vol_creative_title">Creative & Design</h3>
+          <p data-i18n="vol_creative_text">Bring artistic vision to our spaces and community initiatives.</p>
           <ul>
-            <li>Interior Design</li>
-            <li>Mural & Artwork</li>
-            <li>Landscape Design</li>
-            <li>Upcycling Projects</li>
+            <li data-i18n="vol_creative_li1">Interior Design</li>
+            <li data-i18n="vol_creative_li2">Mural & Artwork</li>
+            <li data-i18n="vol_creative_li3">Landscape Design</li>
+            <li data-i18n="vol_creative_li4">Upcycling Projects</li>
           </ul>
         </div>
       </div>
       
       <div class="build-cta">
         <div class="build-cta-content">
-          <h3>No Experience? No Problem!</h3>
-          <p>We welcome all skill levels. What matters most is your passion and willingness to learn.</p>
-          <a href="#contact" class="btn btn-primary">Join Our Builder's Team</a>
+          <h3 data-i18n="vol_noskill_title">No Experience? No Problem!</h3>
+          <p data-i18n="vol_noskill_text">We welcome all skill levels. What matters most is your passion and willingness to learn.</p>
+          <a href="#contact" class="btn btn-primary" data-i18n="vol_cta">Join Our Builder's Team</a>
         </div>
         <div class="build-cta-image">
           <img src="images/volunteer.jpg" alt="People working together on a construction project" class="img-fluid">
@@ -457,7 +470,7 @@
   <!-- Map Section -->
   <section id="map" class="section">
     <div class="container">
-      <h2>Find us</h2>
+      <h2 data-i18n="map_title">Find us</h2>
       <div class="map-container">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1920.7195797176248!2d-96.528225!3d15.674826000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85b929592f9fc5c7%3A0xa7ef568b133ccfcb!2sFemitopia!5e0!3m2!1sen!2sus!4v1749321646761!5m2!1sen!2sus" 
@@ -470,11 +483,11 @@
           title="Femitopia Location">
         </iframe>
         <p style="text-align: center; margin-top: 1rem;">
-          <i class="fas fa-map-marker-alt"></i> MFFC+XJ Arroyo Tres, Oaxaca, Mexico
+          <i class="fas fa-map-marker-alt"></i> <span data-i18n="map_address">MFFC+XJ Arroyo Tres, Oaxaca, Mexico</span>
         </p>
       </div>
       <div class="location-details">
-        <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres, near Playa Zipolite, Oaxaca, México</p>
+        <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="map_location">Arroyo Tres, near Playa Zipolite, Oaxaca, México</span></p>
       </div>
     </div>
   </section>
@@ -482,13 +495,13 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact us</h2>
+      <h2 data-i18n="contact_title">Contact us</h2>
       <div class="contact-content">
         <div class="contact-info">
-          <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres near Playa Zipolite, Oaxaca, México</p>
+          <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="contact_address">Arroyo Tres near Playa Zipolite, Oaxaca, México</span></p>
           <p><i class="fas fa-envelope"></i> <a href="mailto:femitopiaMX@gmail.com">femitopiaMX@gmail.com</a></p>
           <div class="social-links">
-            <p>Follow us-@femitopiamx</p>
+            <p data-i18n="contact_follow">Follow us-@femitopiamx</p>
             <a href="https://www.instagram.com/femitopiamx/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
@@ -496,15 +509,15 @@
           <input type="hidden" name="subject" value="New message from Sunset at Zipolite" >
           
           <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="contact_name_placeholder" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="contact_email_placeholder" required>
           </div>
           <div class="form-group">
-            <textarea name="body" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="body" placeholder="Your Message" data-i18n-placeholder="contact_message_placeholder" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-primary" data-i18n="contact_send">Send Message</button>
         </form>
       </div>
     </div>
@@ -517,21 +530,21 @@
         <div class="footer-logo">
           <img src="images/logo.jpg" alt="Femitopia Logo" class="footer-logo-img">
           <h3>Femitopia</h3>
-          <p>A safe space for queer women to connect, understand, and support each other.</p>
+          <p data-i18n="footer_tagline">A safe space for queer women to connect, understand, and support each other.</p>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_links_title">Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#vision">Our Vision</a></li>
-            <li><a href="#discover-zipolite">About Zipolite</a></li>
-            <li><a href="#stay-with-us">Accommodations</a></li>
-            <li><a href="#volunteer">Volunteer</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="footer_home">Home</a></li>
+            <li><a href="#vision" data-i18n="footer_vision">Our Vision</a></li>
+            <li><a href="#discover-zipolite" data-i18n="footer_zipolite">About Zipolite</a></li>
+            <li><a href="#stay-with-us" data-i18n="footer_accommodations">Accommodations</a></li>
+            <li><a href="#volunteer" data-i18n="footer_volunteer">Volunteer</a></li>
+            <li><a href="#contact" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_title">Contact Info</h4>
           <p><i class="fas fa-map-marker-alt"></i> Arroyo Tres near Playa Zipolite, Oaxaca, México</p>
           <p><i class="fas fa-envelope"></i> <a href="mailto:femitopiaMX@gmail.com">femitopiaMX@gmail.com</a></p>
           <div id="social-media" class="social-links">
@@ -540,7 +553,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Femitopia. All Rights Reserved.</p>
+        <p data-i18n="footer_copyright">&copy; 2025 Femitopia. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -555,5 +568,6 @@
   <script src="js/netlify-form.js"></script>
   <script src="js/slideshow.js"></script>
   <script src="js/navbar-scroll.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>
