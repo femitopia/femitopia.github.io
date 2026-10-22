@@ -3425,6 +3425,67 @@ section h2::after {
   background: #FF7F50;
 }
 
+/* Accommodation slideshow styles */
+.accommodation-slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.accommodation-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.accommodation-slideshow .slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.accommodation-slideshow .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.accommodation-slideshow .slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #FF7F50;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.accommodation-slideshow .slide-btn:hover {
+  background: #FF7F50;
+  color: white;
+}
+
+.accommodation-slideshow .prev-btn {
+  left: 10px;
+}
+
+.accommodation-slideshow .next-btn {
+  right: 10px;
+}
+
 #dream .about-image:hover {
   transform: translateY(-5px);
 }

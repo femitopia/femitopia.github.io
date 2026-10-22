@@ -350,76 +350,45 @@
       </div>
       
       <div class="compact-stay-grid">
+        <!-- Cozy Apartment with Slideshow -->
         <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-1.jpg');"></div>
+          <div class="compact-stay-image accommodation-slideshow">
+            <div class="slide active">
+              <img src="images/house.jpg" alt="Cozy Apartment exterior">
+            </div>
+            <div class="slide">
+              <img src="images/house2.jpg" alt="Cozy Apartment kitchen">
+            </div>
+            <div class="slide">
+              <img src="images/houseview.jpg" alt="Cozy Apartment bathroom">
+            </div>
+            <div class="slide">
+              <img src="images/pool.jpg" alt="Cozy Apartment pool">
+            </div>
+            <button class="slide-btn prev-btn" aria-label="Previous">❮</button>
+            <button class="slide-btn next-btn" aria-label="Next">❯</button>
+          </div>
           <div class="compact-stay-content">
-            <h3 data-i18n="stay_apt_title">Main House</h3>
-            <p data-i18n="stay_apt_text">Our beautiful main structure with stunning views, perfect for community gatherings and relaxation.</p>
+            <h3>Cozy Apartment</h3>
+            <p>Our beautiful apartment with stunning views, featuring a full kitchen, bathroom, and private pool. Perfect for relaxation and comfort.</p>
           </div>
         </div>
         
+        <!-- Rustic Cabin -->
         <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-2.png');"></div>
+          <div class="compact-stay-image" style="background-image: url('images/accommodation-2.png'); background-position: center top; background-size: contain; background-repeat: no-repeat;"></div>
           <div class="compact-stay-content">
-            <h3 data-i18n="stay_cabin_title">Eco Cabins</h3>
-            <p data-i18n="stay_cabin_text">Sustainable wooden cabins designed with natural materials, blending seamlessly with the forest.</p>
+            <h3>Rustic Cabin</h3>
+            <p>A charming red roof cabin nestled in the forest, offering a cozy and intimate retreat surrounded by nature.</p>
           </div>
         </div>
         
+        <!-- Camping Platform -->
         <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-3.png');"></div>
+          <div class="compact-stay-image" style="background-image: url('images/plataform.jpg');"></div>
           <div class="compact-stay-content">
-            <h3 data-i18n="stay_camp_title">Glamping Platforms</h3>
-            <p data-i18n="stay_camp_text">Elevated platforms offering a unique camping experience with comfort and style.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-4.png');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_apt_title">Construction View</h3>
-            <p data-i18n="stay_apt_text">Watch our accommodations take shape, built with love and sustainable practices.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-5.jpg');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_cabin_title">Interior Spaces</h3>
-            <p data-i18n="stay_cabin_text">Comfortable and inviting interiors designed for relaxation and community connection.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-6.jpg');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_camp_title">Natural Setting</h3>
-            <p data-i18n="stay_camp_text">Surrounded by lush greenery, our accommodations offer peace and tranquility.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-7.jpg');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_apt_title">Building Progress</h3>
-            <p data-i18n="stay_apt_text">See the progress of our eco-friendly construction as we build our dream community.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-8.png');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_cabin_title">Structure Details</h3>
-            <p data-i18n="stay_cabin_text">Attention to detail in every corner, from foundation to finishing touches.</p>
-          </div>
-        </div>
-
-        <div class="compact-stay-card">
-          <div class="compact-stay-image" style="background-image: url('images/accommodation-9.jpeg');"></div>
-          <div class="compact-stay-content">
-            <h3 data-i18n="stay_camp_title">Community Space</h3>
-            <p data-i18n="stay_camp_text">Shared spaces designed for connection, collaboration, and celebration together.</p>
-            <a href="#contact" class="btn-primary">Book Your Stay</a>
+            <h3>Camping Platform</h3>
+            <p>An elevated platform with a tent, offering a unique camping experience with comfort and style in the heart of nature.</p>
           </div>
         </div>
       </div>
@@ -659,5 +628,48 @@
   <script src="js/slideshow.js"></script>
   <script src="js/navbar-scroll.js"></script>
   <script src="js/i18n.js?v=2"></script>
+  
+  <!-- Accommodation Slideshow Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accommodationSlideshow = document.querySelector('.accommodation-slideshow');
+      if (accommodationSlideshow) {
+        const slides = accommodationSlideshow.querySelectorAll('.slide');
+        const prevBtn = accommodationSlideshow.querySelector('.prev-btn');
+        const nextBtn = accommodationSlideshow.querySelector('.next-btn');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+          });
+          currentSlide = index;
+        }
+        
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+        
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        
+        // Auto-advance every 5 seconds
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        // Pause on hover
+        accommodationSlideshow.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        accommodationSlideshow.addEventListener('mouseleave', () => {
+          clearInterval(slideInterval);
+          slideInterval = setInterval(nextSlide, 5000);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
