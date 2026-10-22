@@ -143,10 +143,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', animateOnScroll);
     
-    // Set current year in footer
+    // Set current year in footer (update only the year number, preserve i18n)
     const currentYear = new Date().getFullYear();
     const yearElement = document.querySelector('.footer-bottom p');
     if (yearElement) {
-        yearElement.textContent = `© ${currentYear} Femitopia. All Rights Reserved.`;
+        yearElement.setAttribute('data-year', currentYear);
     }
 });
