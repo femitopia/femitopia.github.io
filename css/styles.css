@@ -1449,6 +1449,193 @@ section h2::after {
   transform: translateY(0);
 }
 
+/* Hero CTA Group */
+.hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+/* Experience Section */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.experience-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.experience-card p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.participation-note {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+}
+
+/* Femitopia Today Section */
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.today-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-available .status-badge {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-development .status-badge {
+  background: #FF9800;
+  color: white;
+}
+
+.status-vision .status-badge {
+  background: #9E9E9E;
+  color: white;
+}
+
+.today-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.today-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.today-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+}
+
+.today-card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Plan Your Visit Section */
+.plan-visit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.visit-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.visit-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.visit-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Accommodation Note */
+.accommodation-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: rgba(255, 107, 107, 0.05);
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-cta-group .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .experience-grid,
+  .today-grid,
+  .plan-visit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .carousel-button {
   position: absolute;
   top: 50%;
